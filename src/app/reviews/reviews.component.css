@@ -1,0 +1,221 @@
+/* Style général */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+/* Conteneur principal */
+.reviews-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Animation d'apparition du conteneur */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* En-tête */
+.reviews-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.reviews-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.reviews-header .intro-text {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Section de sélection des items */
+.item-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.item-selector label {
+  font-size: 1.2rem;
+  color: #495057;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.select-item {
+  width: 320px;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: 2px solid #ced4da;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.select-item:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Bouton Ajouter */
+.btn-add {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-add:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Table des reviews */
+.reviews-table-section {
+  margin-top: 40px;
+  padding: 25px;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out;
+}
+
+.reviews-table-section h3 {
+  font-size: 1.9rem;
+  color: #343a40;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead {
+  background-color: #007bff;
+  color: #fff;
+}
+
+table th, table td {
+  padding: 16px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+table tbody tr {
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+table tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+table td {
+  color: #495057;
+}
+
+/* Cellules de la table : actions et texte */
+table td.actions {
+  text-align: center;
+}
+
+table td.actions button {
+  padding: 8px 15px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+table td.actions button:hover {
+  background-color: #218838;
+}
+
+/* Message "No reviews" */
+.no-reviews {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #dc3545;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Section de pagination (si nécessaire) */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pagination a {
+  margin: 0 5px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: #0056b3;
+}
+
+.pagination a.active {
+  background-color: #0056b3;
+  font-weight: bold;
+  cursor: default;
+}
+
+/* Animation de transition sur la table */
+@keyframes fadeInTable {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reviews-table-section table {
+  animation: fadeInTable 1s ease-out;
+}

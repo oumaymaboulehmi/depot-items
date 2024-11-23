@@ -1,0 +1,39 @@
+<div class="reviews-container">
+  <header class="reviews-header">
+    <h2>Product Reviews</h2>
+    <p class="intro-text">Here you can find user reviews for different items. Select a product to see its rating and comments from other users.</p>
+  </header>
+
+  <!-- Section de sélection des items -->
+  <section class="item-selector">
+    <label for="itemSelect">Select Item:</label>
+    <select id="itemSelect" (change)="onItemSelected($event)">
+      <option *ngFor="let item of items" [value]="item._id">{{ item.name }}</option>
+    </select>
+  </section>
+  
+  <!-- Table des reviews pour l'item sélectionné -->
+  <section class="reviews-table-section">
+    <table *ngIf="reviews.length > 0">
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>Rating</th>
+          <th>Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let review of reviews">
+          <td>{{ review.userId.name }}</td>
+          <td>{{ review.rating }}</td>
+          <td>{{ review.comment }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  
+  <!-- Message si aucune review n'est disponible -->
+  <section class="no-reviews">
+    <p *ngIf="reviews?.length === 0">No reviews available for this item.</p>
+  </section>
+</div>
